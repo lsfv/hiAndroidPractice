@@ -10,7 +10,7 @@ import com.linson.android.hiandroid2.R;
 import com.linson.android.hiandroid2.UI.myCustomView.*;
 
 
-//why
+//whyabc
 public class Index extends LSBaseActivity implements View.OnClickListener
 {
     private Button mBtnAdvanceview;
