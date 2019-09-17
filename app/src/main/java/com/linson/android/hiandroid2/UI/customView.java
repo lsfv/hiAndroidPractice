@@ -17,6 +17,7 @@ import com.linson.LSLibrary.CustomUI.LSCircleImagePlus;
 import com.linson.android.hiandroid2.R;
 import com.linson.android.hiandroid2.UI.NewCustomView.MyAnimation.AnimationIndex;
 import com.linson.android.hiandroid2.UI.NewCustomView.MyPaint.PaintIndex;
+import com.linson.android.hiandroid2.UI.NewCustomView.MyTouch.TouchIndex;
 import com.linson.android.hiandroid2.UI.NewCustomView.MyView.ViewIndex;
 import com.linson.android.hiandroid2.UI.myCustomView.scroller1;
 
@@ -26,14 +27,19 @@ import com.linson.android.hiandroid2.UI.myCustomView.scroller1;
 //动画
 public class customView extends LSBaseActivity implements View.OnClickListener
 {
+    private Button mBtnTouch;
     private Button mBtnAnimation;
     private Button mBtnCustomView;
     private Button mBtnPaint;
 
 
+
+
+
     //region  findcontrols and bind click event.
     private void findControls()
     {   //findControls
+        mBtnTouch = (Button) findViewById(R.id.btn_touch);
         mBtnAnimation = (Button) findViewById(R.id.btn_animation);
         mBtnCustomView = (Button) findViewById(R.id.btn_customView);
         mBtnPaint = (Button) findViewById(R.id.btn_paint);
@@ -42,6 +48,7 @@ public class customView extends LSBaseActivity implements View.OnClickListener
         mBtnPaint.setOnClickListener(this);
         mBtnCustomView.setOnClickListener(this);
         mBtnAnimation.setOnClickListener(this);
+        mBtnTouch.setOnClickListener(this);
     }
 
 
@@ -63,6 +70,11 @@ public class customView extends LSBaseActivity implements View.OnClickListener
             case R.id.btn_animation:
             {
                 LSComponentsHelper.startActivity(this, AnimationIndex.class);
+                break;
+            }
+            case R.id.btn_touch:
+            {
+                LSComponentsHelper.startActivity(this, TouchIndex.class);
                 break;
             }
             default:

@@ -23,8 +23,6 @@ public class Index extends LSBaseActivity implements View.OnClickListener
     private Button mBtnUi1;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

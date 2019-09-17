@@ -126,7 +126,8 @@
         <activity android:name=".Fragment.InterAction_index" />
         <activity android:name=".MyContent.ContentIndex" />
         <activity android:name=".Services.SocketPractice" />
-        <activity android:name=".Services.AIDLSys.SysAidl"></activity>
+        <activity android:name=".Services.AIDLSys.SysAidl" />
+        <activity android:name=".UI.NewCustomView.MyTouch.TouchIndex"></activity>
     </application>
 
 </manifest>
