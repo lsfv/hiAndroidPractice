@@ -43,7 +43,9 @@ public class LSLog
         } else {
             infos[0] = elements[4].getClassName().substring(
                     elements[4].getClassName().lastIndexOf(".") + 1);
-            infos[1] = " ["+elements[4].getMethodName() + "].";
+            String ff=elements[4].getMethodName();
+
+            infos[1] = " ["+ff + "].";
             infos[2] = " Line:" +elements[4].getLineNumber() + "";
             return infos[0]+infos[1]+infos[2];
         }
