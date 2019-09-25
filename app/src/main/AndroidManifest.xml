@@ -18,10 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.linson.android.hiandroid2.Index">
+        <activity android:name=".Index">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="android.intent.category.LAUNCHER"></category>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".JavaPractice.Index" />
@@ -53,7 +54,6 @@
         <activity android:name=".BroadcastStudy.Index" />
         <activity android:name=".Selialzation.Index" />
         <activity android:name=".MultiMedia.Index" />
-
         <activity android:name=".MultiMedia.cutBitmap" />
         <activity android:name=".NetworkStudy.Index" />
         <activity android:name=".Fragment.Index" />
@@ -114,7 +114,12 @@
         <activity android:name=".Services.SocketPractice" />
         <activity android:name=".Services.AIDLSys.SysAidl" />
         <activity android:name=".UI.NewCustomView.MyTouch.TouchIndex" />
-        <activity android:name=".UI.NewCustomView.MyTouch.typical"></activity>
+        <activity android:name=".UI.NewCustomView.MyTouch.typical" />
+        <activity android:name=".UI.advanceControls.coordination" />
+        <activity android:name=".UI.advanceControls.Drawer" />
+        <activity android:name=".UI.advanceControls.Navegation" />
+        <activity android:name=".UI.advanceControls.MyToolbar" />
+        <activity android:name=".Pattern.PatternIndex"></activity>
     </application>
 
 </manifest>

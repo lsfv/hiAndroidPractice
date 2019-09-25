@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.linson.LSLibrary.AndroidHelper.LSBaseActivity;
 import com.linson.LSLibrary.AndroidHelper.LSComponentsHelper;
+import com.linson.android.hiandroid2.Pattern.PatternIndex;
 
 import okhttp3.OkHttpClient;
 
@@ -29,14 +30,7 @@ public class Index extends LSBaseActivity implements View.OnClickListener
     private Button mBtnJavapractice2;
     private Button mBtnJavapractice;
     private Button mBtnDp;
-
-
-
-
-
-
-
-
+    private Button mBtnPattern;
 
 
     private void findControls()
@@ -57,7 +51,9 @@ public class Index extends LSBaseActivity implements View.OnClickListener
         mBtnJavapractice2 = (Button) findViewById(R.id.btn_javapractice2);
         mBtnJavapractice = (Button) findViewById(R.id.btn_javapractice);
         mBtnDp = (Button) findViewById(R.id.btn_dp);
+        mBtnPattern = (Button) findViewById(R.id.btn_pattern);
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -66,7 +62,6 @@ public class Index extends LSBaseActivity implements View.OnClickListener
         setContentView(R.layout.activity_index);
         findControls();
         setEvent();
-
         //LSComponentsHelper.LS_Log.Log_INFO("db:"+DebugDB.getAddressLog());
     }
 
@@ -88,6 +83,7 @@ public class Index extends LSBaseActivity implements View.OnClickListener
         mBtnWeather.setOnClickListener(this);
         mBtnWeather2.setOnClickListener(this);
         mBtnDp.setOnClickListener(this);
+        mBtnPattern.setOnClickListener(this);
     }
 
     @Override
@@ -173,6 +169,10 @@ public class Index extends LSBaseActivity implements View.OnClickListener
             {
                 LSComponentsHelper.startActivity(this, com.linson.android.hiandroid2.DesignPattern.Index.class);
                 break;
+            }
+            case R.id.btn_pattern:
+            {
+                LSComponentsHelper.LS_Activity.startActivity(this, PatternIndex.class);break;
             }
         }
     }

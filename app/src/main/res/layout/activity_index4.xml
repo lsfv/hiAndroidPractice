@@ -7,6 +7,72 @@
     tools:context=".UI.Index">
 
     <Button
+        android:id="@+id/btn_toolbar"
+        android:layout_width="149dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="420dp"
+        android:text="ToolBar"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_actionButton"
+        android:layout_width="147dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="420dp"
+        android:text="ActionButton"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_coordinator"
+        android:layout_width="149dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="376dp"
+        android:text="CoordinatorLayout"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_bar"
+        android:layout_width="147dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="376dp"
+        android:text="AppBarLayout"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_navigation"
+        android:layout_width="147dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="332dp"
+        android:text="Navigation"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_drawer"
+        android:layout_width="149dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="332dp"
+        android:text="Drawer"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/btn_advanceview"
         android:layout_width="344dp"
         android:layout_height="44dp"
@@ -22,8 +88,8 @@
         android:layout_width="344dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="276dp"
-        android:text="custom viewnavigate"
+        android:layout_marginTop="288dp"
+        android:text="No Use"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +99,7 @@
         android:layout_width="344dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="244dp"
         android:text="custom view"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +110,7 @@
         android:layout_width="344dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="200dp"
         android:text="list view"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +121,7 @@
         android:layout_width="344dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="156dp"
         android:text="layout"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +143,7 @@
         android:layout_width="344dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="52dp"
         android:text="image view"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"

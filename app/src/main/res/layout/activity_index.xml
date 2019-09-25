@@ -179,4 +179,14 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_javapractice13"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/btn_pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Pattern"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_weather2" />
+
 </android.support.constraint.ConstraintLayout>
