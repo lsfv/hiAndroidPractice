@@ -119,7 +119,12 @@
         <activity android:name=".UI.advanceControls.Drawer" />
         <activity android:name=".UI.advanceControls.Navegation" />
         <activity android:name=".UI.advanceControls.MyToolbar" />
-        <activity android:name=".Pattern.PatternIndex"></activity>
+        <activity android:name=".Pattern.PatternIndex" />
+        <activity android:name=".Pattern.Normal" />
+        <activity android:name=".Pattern.layer" />
+        <activity android:name=".Pattern.MyMVP" />
+        <activity android:name=".Pattern.MyMVP2" />
+        <activity android:name=".Pattern.GoogleMvp"></activity>
     </application>
 
 </manifest>
