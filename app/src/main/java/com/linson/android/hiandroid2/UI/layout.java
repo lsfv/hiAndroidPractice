@@ -8,7 +8,6 @@ import com.linson.android.hiandroid2.R;
 
 public class layout extends LSBaseActivity
 {
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

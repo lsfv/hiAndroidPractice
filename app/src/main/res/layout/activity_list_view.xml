@@ -6,59 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".UI.listView">
 
-    <Button
-        android:id="@+id/btn_recycle3"
-        android:layout_width="62dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="rcc4"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toEndOf="@+id/btn_recycle"
-        app:layout_constraintTop_toTopOf="parent" />
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_recycle"
-        android:layout_width="60dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="1dp"
-        android:text="rcc3"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toEndOf="@+id/btn_recycle2"
-        app:layout_constraintTop_toTopOf="@+id/btn_recycle2" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="500dp"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_recycle2"
-        android:layout_width="65dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="rcc2"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toEndOf="@+id/btn_recycle1"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="62dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:text="delete"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_recycle3"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_recycle1"
-        android:layout_width="62dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="rcc1"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toEndOf="@+id/btn_listview"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btn_recycle3"
+                android:layout_width="62dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="rcc4"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_recycle"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_listview"
-        android:layout_width="72dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="list"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btn_recycle"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="1dp"
+                android:text="rcc3"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_recycle2"
+                app:layout_constraintTop_toTopOf="@+id/btn_recycle2" />
+
+            <Button
+                android:id="@+id/btn_recycle2"
+                android:layout_width="65dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="rcc2"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_recycle1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_recycle1"
+                android:layout_width="62dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="rcc1"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_listview"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_listview"
+                android:layout_width="72dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="list"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </HorizontalScrollView>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="0dp"
@@ -70,7 +95,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_recycle2">
+        app:layout_constraintTop_toBottomOf="@+id/scrollView">
 
         <ListView android:id="@+id/lv_test"
             android:layout_width="match_parent"
