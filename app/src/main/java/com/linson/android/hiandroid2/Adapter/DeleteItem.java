@@ -146,5 +146,4 @@ public class DeleteItem extends RecyclerView.Adapter<DeleteItem.MyHolderView>
             mView=itemView;
         }
     }
-
 }
