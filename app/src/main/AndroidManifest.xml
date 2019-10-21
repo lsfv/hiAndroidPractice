@@ -124,7 +124,8 @@
         <activity android:name=".Pattern.layer" />
         <activity android:name=".Pattern.MyMVP" />
         <activity android:name=".Pattern.MyMVP2" />
-        <activity android:name=".Pattern.GoogleMvp"></activity>
+        <activity android:name=".Pattern.GoogleMvp" />
+        <activity android:name=".UI.OtherControls"></activity>
     </application>
 
 </manifest>

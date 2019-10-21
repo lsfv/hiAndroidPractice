@@ -66,6 +66,7 @@ public class Index extends LSBaseActivity implements View.OnClickListener
         mBtnUi3.setOnClickListener(this);
         mBtnUi4.setOnClickListener(this);
         mBtnUi5.setOnClickListener(this);
+        mBtnUi6.setOnClickListener(this);
         mBtnAdvanceview.setOnClickListener(this);
 
         mBtnDrawer.setOnClickListener(this);
@@ -104,6 +105,10 @@ public class Index extends LSBaseActivity implements View.OnClickListener
             case R.id.btn_ui5:
             {
                 LSComponentsHelper.startActivity(this, customView.class);break;
+            }
+            case R.id.btn_ui6:
+            {
+                LSComponentsHelper.startActivity(this, OtherControls.class);break;
             }
             case R.id.btn_advanceview:
             {
