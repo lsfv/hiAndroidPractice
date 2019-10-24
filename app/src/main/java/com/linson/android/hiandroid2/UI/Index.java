@@ -18,6 +18,8 @@ import com.linson.android.hiandroid2.UI.advanceControls.*;
 //whyabc
 public class Index extends LSBaseActivity implements View.OnClickListener
 {
+    private Button mBtnLayoutInflate;
+    private Button mBtnLayoutLinear;
     private Button mBtnToolbar;
     private Button mBtnActionButton;
     private Button mBtnCoordinator;
@@ -34,6 +36,9 @@ public class Index extends LSBaseActivity implements View.OnClickListener
     private Button mBtnUi1;
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -45,6 +50,8 @@ public class Index extends LSBaseActivity implements View.OnClickListener
 
     private void findcontrols()
     {
+        mBtnLayoutInflate = (Button) findViewById(R.id.btn_layout_inflate);
+        mBtnLayoutLinear = (Button) findViewById(R.id.btn_layout_linear);
         mBtnToolbar = (Button) findViewById(R.id.btn_toolbar);
         mBtnActionButton = (Button) findViewById(R.id.btn_actionButton);
         mBtnCoordinator = (Button) findViewById(R.id.btn_coordinator);
@@ -68,7 +75,7 @@ public class Index extends LSBaseActivity implements View.OnClickListener
         mBtnUi5.setOnClickListener(this);
         mBtnUi6.setOnClickListener(this);
         mBtnAdvanceview.setOnClickListener(this);
-
+        mBtnLayoutInflate.setOnClickListener(this);
         mBtnDrawer.setOnClickListener(this);
         mBtnNavigation.setOnClickListener(this);
         mBtnCoordinator.setOnClickListener(this);
@@ -129,6 +136,10 @@ public class Index extends LSBaseActivity implements View.OnClickListener
             case R.id.btn_toolbar:
             {
                 startActivity(new Intent(this, MyToolbar.class));break;
+            }
+            case R.id.btn_layout_inflate:
+            {
+                startActivity(new Intent(this, InflateTest.class));break;
             }
         }
     }

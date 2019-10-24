@@ -125,7 +125,8 @@
         <activity android:name=".Pattern.MyMVP" />
         <activity android:name=".Pattern.MyMVP2" />
         <activity android:name=".Pattern.GoogleMvp" />
-        <activity android:name=".UI.OtherControls"></activity>
+        <activity android:name=".UI.OtherControls" />
+        <activity android:name=".UI.InflateTest"></activity>
     </application>
 
 </manifest>
