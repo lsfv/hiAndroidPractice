@@ -126,7 +126,12 @@
         <activity android:name=".Pattern.MyMVP2" />
         <activity android:name=".Pattern.GoogleMvp" />
         <activity android:name=".UI.OtherControls" />
-        <activity android:name=".UI.InflateTest"></activity>
+        <activity android:name=".UI.InflateTest" />
+        <activity android:name=".UI.NewCustomView.MyTouch.SameDirection" />
+        <activity android:name=".UI.NewCustomView.MyTouch.DiffDirection" />
+        <activity android:name=".UI.NewCustomView.MyTouch.TypicalEX" />
+        <activity android:name=".UI.NewCustomView.MyTouch.same2" />
+        <activity android:name=".UI.MyViewPager"></activity>
     </application>
 
 </manifest>

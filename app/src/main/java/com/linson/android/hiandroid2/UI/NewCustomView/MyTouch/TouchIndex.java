@@ -18,20 +18,32 @@ import static android.view.MotionEvent.ACTION_UP;
 
 public class TouchIndex extends AppCompatActivity implements View.OnClickListener
 {
+    private Button mBtnTouchSame2;
+    private Button mBtnTouchDiffdirection2;
+    private Button mBtnTouchSamedirection;
     private Button mBtnTouch2;
     private Button mBtnTouch1;
 
 
 
+
     //region  findcontrols and bind click event.
     private void findControls()
-    {   //findControls
+    {
+        //findControls
+        mBtnTouchSame2 = (Button) findViewById(R.id.btn_touch_same2);
+        mBtnTouchDiffdirection2 = (Button) findViewById(R.id.btn_touch_diffdirection2);
+        mBtnTouchSamedirection = (Button) findViewById(R.id.btn_touch_samedirection);
         mBtnTouch2 = (Button) findViewById(R.id.btn_touch2);
         mBtnTouch1 = (Button) findViewById(R.id.btn_touch1);
 
+
         //set event handler
         mBtnTouch1.setOnClickListener(this);
-        mBtnTouch1.setOnClickListener(this);
+        mBtnTouch2.setOnClickListener(this);
+        mBtnTouchSamedirection.setOnClickListener(this);
+        mBtnTouchDiffdirection2.setOnClickListener(this);
+        mBtnTouchSame2.setOnClickListener(this);
     }
 
     @Override
@@ -44,18 +56,26 @@ public class TouchIndex extends AppCompatActivity implements View.OnClickListene
                 LSComponentsHelper.startActivity(this, typical.class);
                 break;
             }
+            case R.id.btn_touch_samedirection:
+            {
+                LSComponentsHelper.startActivity(this, SameDirection.class);
+                break;
+            }
+            case R.id.btn_touch_diffdirection2:
+            {
+                LSComponentsHelper.startActivity(this, DiffDirection.class);
+                break;
+            }
+            case R.id.btn_touch_same2:
+            {
+                LSComponentsHelper.startActivity(this, same2.class);
+            }
             default:
             {
                 break;
             }
         }
     }
-
-
-    //endregion
-
-    //region other member variable
-
     //endregion
 
     @Override
@@ -66,6 +86,4 @@ public class TouchIndex extends AppCompatActivity implements View.OnClickListene
 
         findControls();
     }
-
-
 }

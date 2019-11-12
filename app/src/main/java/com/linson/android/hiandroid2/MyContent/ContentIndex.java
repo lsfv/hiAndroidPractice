@@ -2,9 +2,14 @@ package com.linson.android.hiandroid2.MyContent;
 
 
 import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.ContentObserver;
 import android.net.Uri;
+import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -18,6 +23,8 @@ import com.linson.LSLibrary.AndroidHelper.LSComponentsHelper;
 import com.linson.android.hiandroid2.R;
 
 import java.util.List;
+
+import app.lslibrary.androidHelper.LSLog;
 
 
 public class ContentIndex extends AppCompatActivity implements View.OnClickListener
@@ -69,6 +76,9 @@ public class ContentIndex extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_index);
         findControls();
+
+        //注册 监控器 数据变更.
+        getContentResolver().registerContentObserver(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, true, new AudioObserver(null));
     }
 
     private void showcontact()
@@ -105,4 +115,26 @@ public class ContentIndex extends AppCompatActivity implements View.OnClickListe
         intent_call.setData(Uri.parse("tel:10086"));
         startActivity(intent_call);
     }
+
+
+    //region AudioObserver
+    public class AudioObserver extends ContentObserver
+    {
+        public AudioObserver(Handler handler)
+        {
+            super(null);
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri)
+        {
+            LSLog.Log_INFO("ooo:"+uri.toString());
+            if(uri.toString().equals("content://media/external") || uri.toString().equals("content://media/external/audio/media"))
+            {
+                LSLog.Log_INFO("aaa");
+                //触发
+            }
+        }
+    }
+    //endregion
 }

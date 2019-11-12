@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.linson.LSLibrary.AndroidHelper.LSBaseActivity;
 import com.linson.LSLibrary.AndroidHelper.LSComponentsHelper;
 import com.linson.android.Model.Sale;
+import com.linson.android.hiandroid2.DesignPattern.MyObserver;
 import com.linson.android.hiandroid2.R;
 
 import java.util.ArrayList;
@@ -25,6 +26,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
+
+import app.lslibrary.androidHelper.LSLog;
 
 public class Index extends LSBaseActivity
 {
@@ -53,9 +56,64 @@ public class Index extends LSBaseActivity
         tv_msg = findViewById(R.id.tv_msg);
 
         //threadpool();
+        //regex();
+        PlaySongv2 playsong=new PlaySongv2();
 
-        regex();
+        playsong.add(new IplayHandler()
+        {
+            @Override
+            public void inChangeSong(int sid)
+            {
+                LSLog.Log_INFO("i know play:"+sid);
+            }
+        });
+
+        playsong.add(new IplayHandler()
+        {
+            @Override
+            public void inChangeSong(int sid)
+            {
+                LSLog.Log_INFO("i also know play:"+sid);
+            }
+        });
+
+        playsong.play(3);
     }
+
+
+
+    private static class LSEvent<T>
+    {
+        protected final List<T> mObservers=new LinkedList<>();
+
+        public void  add(T handler)
+        {
+            mObservers.add(handler);
+        }
+
+        public void remove(T handler)
+        {
+            mObservers.remove(handler);
+        }
+
+    }
+
+    public interface IplayHandler
+    {
+        public void inChangeSong(int sid);
+    }
+
+    private static class PlaySongv2 extends LSEvent<IplayHandler>
+    {
+        public void play(int sid)
+        {
+            for(IplayHandler handler:mObservers)
+            {
+                handler.inChangeSong(sid);
+            }
+        }
+    }
+
 
     private void regex()
     {

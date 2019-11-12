@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -188,6 +189,7 @@ public class alertdialog extends LSBaseActivity implements View.OnClickListener
 
 
 
+
     //class
     //custmo alertdialog
     private static class CustomDialog extends Dialog implements View.OnClickListener
@@ -197,15 +199,16 @@ public class alertdialog extends LSBaseActivity implements View.OnClickListener
 
         protected CustomDialog(@NonNull Context context)
         {
-            super(context);
+            super(context, R.style.Fullscreen);
+
         }
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState)
         {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.dialog_password);
-
             findcontrols();
         }
 
@@ -232,7 +235,6 @@ public class alertdialog extends LSBaseActivity implements View.OnClickListener
             super(context);
         }
     }
-
 
 
     //和自定义弹框一样。只是中间多继承了一层。中间的类实现了全屏。

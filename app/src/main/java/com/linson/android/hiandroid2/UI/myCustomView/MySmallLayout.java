@@ -21,26 +21,29 @@ public class MySmallLayout extends ConstraintLayout
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        boolean res=false;
-        switch (event.getAction())
-        {
-            case MotionEvent.ACTION_DOWN:
-            {
-                res= true;
-                break;
-            }
-            case MotionEvent.ACTION_UP:
-            {
-                res= true;
-                break;
-            }
-        }
-
-        return res;
+//        boolean res=false;
+//        switch (event.getAction())
+//        {
+//            case MotionEvent.ACTION_DOWN:
+//            {
+//                res= true;
+//                break;
+//            }
+//            case MotionEvent.ACTION_UP:
+//            {
+//                res= true;
+//                break;
+//            }
+//        }
+//
+//        return res;
 //        LSComponentsHelper.LS_Log.Log_INFO(event.toString());
 //        boolean evetnok=super.onTouchEvent(event);
 //        LSComponentsHelper.LS_Log.Log_INFO("return:"+evetnok);
 //        return evetnok;
+
+        LSComponentsHelper.LS_Log.Log_INFO(event.toString());
+        return super.onTouchEvent(event);
     }
 
     @Override

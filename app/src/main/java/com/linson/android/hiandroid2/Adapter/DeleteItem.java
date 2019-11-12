@@ -41,8 +41,6 @@ public class DeleteItem extends RecyclerView.Adapter<DeleteItem.MyHolderView>
     }
 
 
-
-
     @Override
     public void onBindViewHolder(@NonNull final MyHolderView myHolderView, int i)
     {

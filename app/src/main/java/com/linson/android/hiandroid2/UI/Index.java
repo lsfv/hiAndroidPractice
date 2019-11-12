@@ -18,6 +18,7 @@ import com.linson.android.hiandroid2.UI.advanceControls.*;
 //whyabc
 public class Index extends LSBaseActivity implements View.OnClickListener
 {
+    private Button mBtnUiviewpager;
     private Button mBtnLayoutInflate;
     private Button mBtnLayoutLinear;
     private Button mBtnToolbar;
@@ -35,10 +36,6 @@ public class Index extends LSBaseActivity implements View.OnClickListener
     private Button mBtnUi;
     private Button mBtnUi1;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -50,6 +47,7 @@ public class Index extends LSBaseActivity implements View.OnClickListener
 
     private void findcontrols()
     {
+        mBtnUiviewpager = (Button) findViewById(R.id.btn_uiviewpager);
         mBtnLayoutInflate = (Button) findViewById(R.id.btn_layout_inflate);
         mBtnLayoutLinear = (Button) findViewById(R.id.btn_layout_linear);
         mBtnToolbar = (Button) findViewById(R.id.btn_toolbar);
@@ -82,6 +80,7 @@ public class Index extends LSBaseActivity implements View.OnClickListener
         mBtnDrawer.setOnClickListener(this);
         mBtnToolbar.setOnClickListener(this);
         mBtnActionButton.setOnClickListener(this);
+        mBtnUiviewpager.setOnClickListener(this);
     }
 
     @Override
@@ -140,6 +139,10 @@ public class Index extends LSBaseActivity implements View.OnClickListener
             case R.id.btn_layout_inflate:
             {
                 startActivity(new Intent(this, InflateTest.class));break;
+            }
+            case R.id.btn_uiviewpager:
+            {
+                startActivity(new Intent(this, MyViewPager.class));break;
             }
         }
     }

@@ -22,4 +22,10 @@ public class MyButtonOk extends android.support.v7.widget.AppCompatButton
     }
 
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        LSLog.Log_INFO(event.toString());
+        return super.onTouchEvent(event);
+    }
 }

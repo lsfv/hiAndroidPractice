@@ -1,15 +1,15 @@
 package com.linson.android.hiandroid2.UI.NewCustomView.MyTouch.cv;
 
 import android.content.Context;
-import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.widget.ScrollView;
 
 import app.lslibrary.androidHelper.LSLog;
 
-public class MyInnerLayout extends ConstraintLayout
+public class ScrollViewEXInner extends ScrollView
 {
-    public MyInnerLayout(Context context, AttributeSet attrs)
+    public ScrollViewEXInner(Context context, AttributeSet attrs)
     {
         super(context, attrs);
     }
@@ -17,6 +17,10 @@ public class MyInnerLayout extends ConstraintLayout
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev)
     {
+        if(ev.getAction()==MotionEvent.ACTION_DOWN)
+        {
+            getParent().requestDisallowInterceptTouchEvent(true);
+        }
         LSLog.Log_INFO(ev.toString());
         return super.dispatchTouchEvent(ev);
     }
@@ -24,14 +28,16 @@ public class MyInnerLayout extends ConstraintLayout
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev)
     {
-        LSLog.Log_INFO(ev.toString());
-        return super.onInterceptTouchEvent(ev);
+        boolean res = super.onInterceptTouchEvent(ev);
+        LSLog.Log_INFO(res + "..." + ev.toString());
+        return res;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        LSLog.Log_INFO(event.toString());
-        return super.onTouchEvent(event);
+        boolean res = super.onTouchEvent(event);
+        LSLog.Log_INFO(res + "..." + event.toString());
+        return res;
     }
 }

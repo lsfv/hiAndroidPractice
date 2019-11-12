@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".UI.Index">
 
+    <Button android:id="@+id/btn_uiviewpager" style="@style/Widget.AppCompat.Button.Small" android:layout_width="96dp" android:layout_height="41dp" android:layout_marginStart="16dp" android:layout_marginTop="4dp" android:text="ViewPager" android:textAllCaps="false" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/btn_toolbar" />
     <Button
         android:id="@+id/btn_layout_inflate"
         android:layout_width="80dp"
