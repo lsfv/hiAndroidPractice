@@ -63,6 +63,7 @@ public class MyViewPager extends AppCompatActivity
     }
     //endregion
 
+
     //region The class of FindControls
     private MyControls mMyControls=null;
     public class MyControls

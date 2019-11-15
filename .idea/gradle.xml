@@ -10,9 +10,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lslibrary" />
+            <option value="$PROJECT_DIR$/myuitest2" />
             <option value="$PROJECT_DIR$/myunittest" />
             <option value="$PROJECT_DIR$/myunittestpractice" />
             <option value="$PROJECT_DIR$/newapp" />
+            <option value="$PROJECT_DIR$/testexit" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
