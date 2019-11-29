@@ -32,6 +32,9 @@ import app.lslibrary.androidHelper.LSLog;
 public class Index extends LSBaseActivity
 {
     private TextView tv_msg;
+
+    private Integer intvalue;
+
     //private  static Integer mStaticint=test();
 
     public  static Integer test()
@@ -57,6 +60,38 @@ public class Index extends LSBaseActivity
 
         //threadpool();
         //regex();
+        //event();
+
+        LSLog.Log_INFO(intvalue+"a");
+        intvalue=3;
+        LSLog.Log_INFO(intvalue+"b");
+
+    }
+
+    public int getIntvalue()
+    {
+        LSLog.Log_INFO("");
+        if(intvalue==null)
+        {
+            return 5;
+        }
+        return intvalue;
+    }
+
+    public void setIntvalue(int a)
+    {
+        LSLog.Log_INFO("");
+        intvalue=a;
+    }
+
+    public void setIntvalue()
+    {
+        LSLog.Log_INFO("");
+        intvalue=99;
+    }
+
+    private void event()
+    {
         PlaySongv2 playsong=new PlaySongv2();
 
         playsong.add(new IplayHandler()
@@ -79,7 +114,6 @@ public class Index extends LSBaseActivity
 
         playsong.play(3);
     }
-
 
 
     private static class LSEvent<T>
