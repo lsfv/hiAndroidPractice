@@ -10,6 +10,11 @@ public class LSLog
     {
         Log.i(LOGTAG, getAutoJumpLogInfos()+" : "+msg);
     }
+
+    public static void Log_INFO( )
+    {
+        Log.i(LOGTAG, getAutoJumpLogInfos());
+    }
     public static void Log_INFO(String msgForamt,Object... values)
     {
         Log.i(LOGTAG, getAutoJumpLogInfos()+" : "+String.format(msgForamt, values));

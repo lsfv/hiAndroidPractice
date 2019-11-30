@@ -70,6 +70,11 @@ public class PatternIndex extends AppCompatActivity implements View.OnClickListe
                 LSComponentsHelper.LS_Activity.startActivity(this, GoogleMvp.class);
                 break;
             }
+            case R.id.btn_mvp3:
+            {
+                LSComponentsHelper.LS_Activity.startActivity(this, Databind.class);
+                break;
+            }
             default:
             {
                 break;

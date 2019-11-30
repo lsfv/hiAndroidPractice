@@ -52,7 +52,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener
         {
             case R.id.btn_handler:
             {
-               // LSComponentsHelper.startActivity(this, com.linson.android.hiandroid2.Services.HandlerPractice.class);
+                LSComponentsHelper.startActivity(this, com.linson.android.hiandroid2.Services.HandlerPractice.class);
                 break;
             }
             case R.id.btn_async:

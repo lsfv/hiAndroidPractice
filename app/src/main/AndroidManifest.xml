@@ -131,7 +131,8 @@
         <activity android:name=".UI.NewCustomView.MyTouch.DiffDirection" />
         <activity android:name=".UI.NewCustomView.MyTouch.TypicalEX" />
         <activity android:name=".UI.NewCustomView.MyTouch.same2" />
-        <activity android:name=".UI.MyViewPager"></activity>
+        <activity android:name=".UI.MyViewPager" />
+        <activity android:name=".Pattern.Databind"></activity>
     </application>
 
 </manifest>
